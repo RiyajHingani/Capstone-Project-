@@ -1,0 +1,35 @@
+pipeline {
+ agent any
+ environment {
+  dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
+ }
+ stages {
+  stage('Checkout') {
+   steps {
+    git credentialsId: 'none',
+    url: 'https://github.com/RiyajHingani/Capstone-Project-.git', branch: 'main'
+   }
+  }
+  stage('Restore packages'){
+   steps{
+      bat "dotnet restore capstone-project\\ABC_Healthcare\\HealthCare.csproj"
+     }
+  }
+  stage('Clean'){
+    steps{
+        bat "dotnet clean capstone-project\\ABC_Healthcare\\HealthCare.csproj"
+     }
+   }
+ stage('Build') {
+   steps {
+    bat 'dotnet build capstone-project\\ABC_Healthcare\\HealthCare.sln --configuration Release'
+   }
+  }
+ 
+  stage('Publish'){
+     steps{
+       bat "dotnet publish capstone-project\\ABC_Healthcare\\HealthCare.csproj "
+     }
+}
+ }
+}

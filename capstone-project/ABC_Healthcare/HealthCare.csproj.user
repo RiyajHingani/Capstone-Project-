@@ -14,6 +14,7 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>False</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <ActiveDebugProfile>HealthCare</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Riyaj\OneDrive\Desktop\simplilearn\Capstone_project\capstone-project\ABC_Healthcare\Properties\PublishProfiles\ABCHealthcare.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
